@@ -105,15 +105,7 @@ public class word_diff_match_patch_test {
     }
 
     private static String getInsertedText(String text) {
-        if (text.endsWith("\n")) {
-            if (text.length() > 1) {
-                return "{+" + text.substring(0, text.length() - 1) + "+}\n";
-            } else {
-                return "\n";
-            }
-        } else {
-            return "{+" + text + "+}";
-        }
+        return "{+" + text + "+}";
     }
 
     private static void assertEquals(String error_msg, Object a, Object b) {
